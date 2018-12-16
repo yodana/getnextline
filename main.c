@@ -15,6 +15,10 @@ int main(int argc, char **argv)
 		free(line);
 	}
 //	printf("%d",i);
+	char *ine = "lol";
+	char *tmp;
+	tmp = ine;
+	printf("%s\n",tmp);
 	close(fd);
 	return 0;
 }

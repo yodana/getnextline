@@ -6,7 +6,7 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 15:52:57 by yodana            #+#    #+#             */
-/*   Updated: 2018/11/19 13:59:49 by yodana           ###   ########.fr       */
+/*   Updated: 2018/12/10 16:17:45 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlen(const char *s)
 	size_t i;
 
 	i = 0;
+	if (s == NULL)
+		return (0);
 	while (s[i])
 		i++;
 	return (i);

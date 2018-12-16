@@ -6,7 +6,7 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/05 16:13:07 by yodana            #+#    #+#             */
-/*   Updated: 2018/12/06 16:37:33 by yodana           ###   ########.fr       */
+/*   Updated: 2018/12/16 17:34:45 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_H
 
 # include "libft/libft.h"
-# define BUFF_SIZE 32
+# define BUFF_SIZE 34
 
 int		get_next_line(const int fd, char **line);
 

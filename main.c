@@ -8,17 +8,11 @@ int main(int argc, char **argv)
 	int i = 0;
 		line = NULL;
 	int fd = open(argv[1],O_RDONLY);
-//	printf("ok");
-	while((i = get_next_line(fd, &line)))
-	{
-		ft_putendl(line);
-		free(line);
-	}
-//	printf("%d",i);
-	char *ine = "lol";
-	char *tmp;
-	tmp = ine;
-	printf("%s\n",tmp);
+	int fd2 = open(argv[2],O_RDONLY);
+	get_next_line(fd,&line);
+//	{
+//		ft_putendl(line);
+//		free(line);
 	close(fd);
 	return 0;
 }

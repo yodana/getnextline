@@ -6,7 +6,7 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/05 16:12:52 by yodana            #+#    #+#             */
-/*   Updated: 2018/12/16 21:18:01 by yodana           ###   ########.fr       */
+/*   Updated: 2018/12/17 19:32:45 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,31 +30,34 @@ void		ft_save(char **save,char **line)
 
 int		get_next_line(const int fd, char **line)
 {
-	static char *save = NULL;
+	static t_list *save;
 	char buf[BUFF_SIZE + 1];
 	int ret;
+	char *tmp;
 
 	if (BUFF_SIZE <= 0 || fd < 0)
 		return (-1);
-	if (save == NULL)
-		save = ft_strnew(0);
-	while ((ret = read(fd, buf, BUFF_SIZE)) > 0)
-	{
-		buf[ret] = '\0';
-		save = ft_strjoin((const char*)save,(const char*)buf);
-		if (ft_strchr(buf,'\n'))
-		{
-			ft_save(&save,line);
-			return (1);
-		}
-	}
-	if (ret < 0)
-		return (-1);
-	if (ft_strlen(save))
-	{
-		ft_save(&save, line);
-		return (1);
-	}
-	ft_strdel(&save);
+	//if (save == NULL)
+	//save->content = ft_strnew(0);
+//	while ((ret = read(fd, buf, BUFF_SIZE)) > 0)
+///	{
+//		buf[ret] = '\0';
+//		tmp = save->content;
+		//tmp = ft_strjoin(save->content,"lol");
+//		ft_strdel(&tmp);
+//		if (ft_strchr(buf,'\n'))
+//		{
+//			ft_save(save->content,line);
+//			return (1);
+//		}
+//	}
+//	if (ret < 0)
+//		return (-1);
+//	if (ft_strlen(save->content))
+//	{
+//		ft_save(save->content, line);
+//		return (1);
+//	}
+//	ft_strdel(save->content);*/
 	return (0);
 }

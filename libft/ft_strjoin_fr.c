@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strjoin_fr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/05 16:13:07 by yodana            #+#    #+#             */
-/*   Updated: 2018/12/17 16:35:57 by yodana           ###   ########.fr       */
+/*   Created: 2018/12/17 14:22:32 by yodana            #+#    #+#             */
+/*   Updated: 2018/12/17 14:26:54 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
 
-# include "libft/libft.h"
-# define BUFF_SIZE 32
+char	*ft_strjoin_fr(char *s1, char *s2)
+{
+	char *dest;
 
-int		get_next_line(const int fd, char **line);
-
-#endif
-
+	if (!(dest = ft_strjoin(s1,s2)))
+		return (NULL);
+	ft_strdel(&s1);
+//	ft_strdel(&s2);
+	return (dest);
+}

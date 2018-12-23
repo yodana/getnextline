@@ -6,7 +6,7 @@
 /*   By: yodana <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 15:02:10 by yodana            #+#    #+#             */
-/*   Updated: 2018/12/18 17:41:10 by yodana           ###   ########.fr       */
+/*   Updated: 2018/12/23 15:33:16 by yodana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # define GREEN "\033[0;32m"
 # define RED "\033[0;31m"
 
-char			*ft_strjoin_fr(char *s1, char *s2);
+char			*ft_strjoin_fr(char *s1, char *s2, int i);
 char			*ft_itoa(int c);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
 int				ft_strequ(char const *s1, char const *s2);

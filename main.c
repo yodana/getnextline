@@ -9,11 +9,14 @@ int main(int argc, char **argv)
 		line = NULL;
 	int fd = open(argv[1],O_RDONLY);
 	int fd2 = open(argv[2],O_RDONLY);
-	while(get_next_line(fd,&line))
-	{
+	get_next_line(fd,&line);
 		ft_putendl(line);
-		free(line);
-	}
+	get_next_line(fd2,&line);
+	ft_putendl(line);
+	get_next_line(fd,&line);
+	ft_putendl(line);
+	get_next_line(fd2,&line);
+	ft_putendl(line);
 	close(fd);
 	return 0;
 }
